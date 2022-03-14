@@ -3,7 +3,7 @@
 using namespace std;
 bool gameover = false;
 
-void Check(int nr)
+void Check(int nr, int balance)
 {
 	system("cls");
 	int const size = 10;
@@ -48,6 +48,7 @@ void Check(int nr)
 	if (arr[rand_nr] == nr)
 	{
 		cout << "Powerful! you win 50$";
+		balance += 50;
 	}
 	else {
 		cout << "The random nr was " << arr[rand_nr] <<endl<< "You lose, enter '+' if u want to try again, or '-' if u want to exit: ";
@@ -70,7 +71,7 @@ int main()
 		while (!gameover)
 		{
 			if (balance >= 30) {
-				Check(nr);
+				Check(nr, balance);
 				balance -= 30;
 			}
 			else {
