@@ -51,7 +51,8 @@ void Check(int nr, int balance)
 		balance += 50;
 	}
 	else {
-		cout << "The random nr was " << arr[rand_nr] <<endl<< "You lose, enter '+' if u want to try again, or '-' if u want to exit: ";
+		balance -= 30;
+		cout << "You lose, the random nr was " << arr[rand_nr] <<endl<< "Enter '+' if u want to try again, or '-' if u want to exit: ";
 		cin >> sym;
 		if(sym == '-')
 		{
